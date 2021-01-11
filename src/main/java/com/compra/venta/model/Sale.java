@@ -25,7 +25,7 @@ public class Sale {
 	
 	//***RELACIONES DE MUCHOS A UNO***
 	@ManyToOne
-	@JoinColumn(name = "mail")
+	@JoinColumn(name = "mail")//esta line a de aca es la que crea la columna en la tabla
 	private User user;
 	
 	@ManyToOne

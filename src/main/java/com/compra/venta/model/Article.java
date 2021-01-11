@@ -16,7 +16,7 @@ public class Article {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_articulo")
+	@Column(name = "id_article")
 	private int idArticle;
 	
 	@Column(name = "name_article", nullable = false, length = 100)
