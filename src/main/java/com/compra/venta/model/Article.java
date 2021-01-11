@@ -26,10 +26,8 @@ public class Article {
 	public Article() {
 	}
 
-	public Article(int idArticle, String nameArticle, double priceArticle) {
+	public Article(int idArticle) {
 		this.idArticle = idArticle;
-		this.nameArticle = nameArticle;
-		this.priceArticle = priceArticle;
 	}
 	
 	//GETTERS AND SETTTERS

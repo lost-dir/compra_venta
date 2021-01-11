@@ -26,10 +26,8 @@ public class User {
 	public User() {
 	}
 
-	public User(String mail, String userName, String passUser) {
+	public User(String mail) {
 		this.mail = mail;
-		this.userName = userName;
-		this.passUser = passUser;
 	}
 
 	public String getMail() {

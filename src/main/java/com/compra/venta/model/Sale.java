@@ -24,9 +24,8 @@ public class Sale {
 	public Sale() {
 	}
 
-	public Sale(int idSale, Date saleDate) {
+	public Sale(int idSale) {
 		this.idSale = idSale;
-		this.saleDate = saleDate;
 	}
 
 	public int getIdSale() {
