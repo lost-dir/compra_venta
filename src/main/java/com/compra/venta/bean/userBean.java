@@ -6,7 +6,7 @@ import java.io.Serializable;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class userBean implements Serializable {
+public class UserBean implements Serializable {
 
 	/**
 	 * 
@@ -24,10 +24,10 @@ public class userBean implements Serializable {
 	@Size(max = 100)
 	private String passUser;
 
-	public userBean() {
+	public UserBean() {
 	}
 
-	public userBean(@NotNull @Size(max = 100) String mail, @NotNull @Size(max = 50) String userName,
+	public UserBean(@NotNull @Size(max = 100) String mail, @NotNull @Size(max = 50) String userName,
 			@NotNull @Size(max = 100) String passUser) {
 		this.mail = mail;
 		this.userName = userName;

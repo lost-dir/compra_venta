@@ -5,7 +5,7 @@ import java.io.Serializable;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class articleBean implements Serializable {
+public class ArticleBean implements Serializable {
 
 	/**
 	 * 
@@ -22,10 +22,10 @@ public class articleBean implements Serializable {
 	private double priceArticle;
 
 	//CONSTRUCTORS
-	public articleBean() {
+	public ArticleBean() {
 	}
 
-	public articleBean(int idArticulo, @NotNull @Size(max = 100) String nameArticle, @NotNull double priceArticle) {
+	public ArticleBean(int idArticulo, @NotNull @Size(max = 100) String nameArticle, @NotNull double priceArticle) {
 		this.idArticulo = idArticulo;
 		this.nameArticle = nameArticle;
 		this.priceArticle = priceArticle;

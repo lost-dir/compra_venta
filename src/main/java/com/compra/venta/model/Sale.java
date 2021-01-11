@@ -21,6 +21,7 @@ public class Sale {
 	@Column(name = "sale_date", nullable = false)
 	private Date saleDate;
 
+	//CONSTRUCTORS
 	public Sale() {
 	}
 
@@ -28,6 +29,7 @@ public class Sale {
 		this.idSale = idSale;
 	}
 
+	//GETTERS & SETTERS
 	public int getIdSale() {
 		return idSale;
 	}
