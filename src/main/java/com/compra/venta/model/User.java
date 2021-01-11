@@ -1,10 +1,13 @@
 package com.compra.venta.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +24,12 @@ public class User {
 	
 	@Column(name = "pass_user", nullable = false, length = 100)
 	private String passUser;
+	
+	//***RELACIÓN DE UNO A UNO***
+	@OneToOne(cascade = CascadeType.REMOVE)
+	@JoinColumn(name = "idInfo")
+	private InfoUser infoUser;
+	//***FIN DE LA RELACIÓN***
 	
 	//CONSTRUCTORS
 	public User() {
@@ -53,5 +62,14 @@ public class User {
 
 	public void setPassUser(String passUser) {
 		this.passUser = passUser;
+	}
+	//GETTER & SETTER DE LA ENTIDAD RELACIONADA ARRIBA
+
+	public InfoUser getInfoUser() {
+		return infoUser;
+	}
+
+	public void setInfoUser(InfoUser infoUser) {
+		this.infoUser = infoUser;
 	}
 }

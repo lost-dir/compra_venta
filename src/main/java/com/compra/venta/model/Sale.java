@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -20,6 +22,16 @@ public class Sale {
 	
 	@Column(name = "sale_date", nullable = false)
 	private Date saleDate;
+	
+	//***RELACIONES DE MUCHOS A UNO***
+	@ManyToOne
+	@JoinColumn(name = "mail")
+	private User user;
+	
+	@ManyToOne
+	@JoinColumn(name = "id_articulo")
+	private Article article;
+	//***FIN DE LAS RELACIONES***
 
 	//CONSTRUCTORS
 	public Sale() {
@@ -44,5 +56,21 @@ public class Sale {
 
 	public void setSaleDate(Date saleDate) {
 		this.saleDate = saleDate;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Article getArticle() {
+		return article;
+	}
+
+	public void setArticle(Article article) {
+		this.article = article;
 	}
 }
