@@ -5,6 +5,8 @@ import java.io.Serializable;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.compra.venta.model.InfoArticle;
+
 public class ArticleBean implements Serializable {
 
 	/**
@@ -12,7 +14,7 @@ public class ArticleBean implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private int idArticulo;
+	private int idArticle;
 	
 	@NotNull
 	@Size(max = 100)
@@ -20,24 +22,24 @@ public class ArticleBean implements Serializable {
 	
 	@NotNull
 	private double priceArticle;
+	
+	private InfoArticle infoArticle;
 
 	//CONSTRUCTORS
 	public ArticleBean() {
 	}
 
-	public ArticleBean(int idArticulo, @NotNull @Size(max = 100) String nameArticle, @NotNull double priceArticle) {
-		this.idArticulo = idArticulo;
-		this.nameArticle = nameArticle;
-		this.priceArticle = priceArticle;
+	public ArticleBean(int idArticulo) {
+		this.idArticle = idArticulo;
 	}
 	
 	//GETTERS & SETTERS
 	public int getIdArticulo() {
-		return idArticulo;
+		return idArticle;
 	}
 
 	public void setIdArticulo(int idArticulo) {
-		this.idArticulo = idArticulo;
+		this.idArticle = idArticulo;
 	}
 
 	public String getNameArticle() {
@@ -54,5 +56,13 @@ public class ArticleBean implements Serializable {
 
 	public void setPriceArticle(double priceArticle) {
 		this.priceArticle = priceArticle;
+	}
+
+	public InfoArticle getInfoArticle() {
+		return infoArticle;
+	}
+
+	public void setInfoArticle(InfoArticle infoArticle) {
+		this.infoArticle = infoArticle;
 	}
 }
