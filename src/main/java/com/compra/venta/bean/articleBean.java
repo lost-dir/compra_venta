@@ -34,7 +34,7 @@ public class ArticleBean implements Serializable {
 	}
 	
 	//GETTERS & SETTERS
-	public int getIdArticulo() {
+	public int getIdArticle() {
 		return idArticle;
 	}
 

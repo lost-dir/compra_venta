@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.compra.venta.model.InfoArticle;
 
 @Repository
-public interface InfoArticleService extends JpaRepository<InfoArticle, Integer> {
+public interface InfoArticleRepository extends JpaRepository<InfoArticle, Integer> {
 
 }

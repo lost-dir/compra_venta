@@ -31,9 +31,11 @@ public class ArticleServiceImpl implements ArticleService{
 
 	@Override
 	public int updateArticle(ArticleBean articleBean) {
-		Article article = this.articleRepo.findById(articleBean.getIdArticulo()).orElseThrow();
+		Article article = this.articleRepo.findById(articleBean.getIdArticle()).orElseThrow();
+		article.setIdArticle(articleBean.getIdArticle());
 		article.setNameArticle(articleBean.getNameArticle());
 		article.setPriceArticle(articleBean.getPriceArticle());
+		article.setInfoArticle(articleBean.getInfoArticle());
 		this.articleRepo.save(article);
 		return article.getIdArticle();
 	}
