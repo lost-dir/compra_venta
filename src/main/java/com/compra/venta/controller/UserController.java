@@ -17,14 +17,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.compra.venta.bean.UserBean;
-import com.compra.venta.service.impl.UserServiceImplement;
+import com.compra.venta.service.impl.UserServiceImpl;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
 	
 	@Autowired
-	private UserServiceImplement userService;
+	private UserServiceImpl userService;
 	
 	@PostMapping("/saveUser")
 	public ResponseEntity<Boolean> saveUser(@Valid @RequestBody UserBean userBean){

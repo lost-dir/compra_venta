@@ -14,7 +14,7 @@ import com.compra.venta.service.UserService;
 
 @Service
 @Transactional
-public class UserServiceImplement implements UserService {
+public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserRepository userRepo;
@@ -35,6 +35,7 @@ public class UserServiceImplement implements UserService {
 		user.setMail(userBean.getMail());
 		user.setUserName(userBean.getUserName());
 		user.setPassUser(userBean.getPassUser());
+		user.setInfoUser(userBean.getInfoUser());
 		return user.getMail();
 	}
 
