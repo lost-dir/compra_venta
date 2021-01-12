@@ -6,6 +6,8 @@ import java.io.Serializable;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.compra.venta.model.InfoUser;
+
 public class UserBean implements Serializable {
 
 	/**
@@ -23,15 +25,14 @@ public class UserBean implements Serializable {
 	@NotNull
 	@Size(max = 100)
 	private String passUser;
+	
+	private InfoUser infoUser;
 
 	public UserBean() {
 	}
 
-	public UserBean(@NotNull @Size(max = 100) String mail, @NotNull @Size(max = 50) String userName,
-			@NotNull @Size(max = 100) String passUser) {
+	public UserBean(String mail) {
 		this.mail = mail;
-		this.userName = userName;
-		this.passUser = passUser;
 	}
 
 	public String getMail() {
@@ -56,5 +57,13 @@ public class UserBean implements Serializable {
 
 	public void setPassUser(String passUser) {
 		this.passUser = passUser;
+	}
+
+	public InfoUser getInfoUser() {
+		return infoUser;
+	}
+
+	public void setInfoUser(InfoUser infoUser) {
+		this.infoUser = infoUser;
 	}
 }
