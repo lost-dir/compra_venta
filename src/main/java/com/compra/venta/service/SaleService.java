@@ -14,7 +14,7 @@ public interface SaleService {
 	public int updateSale(SaleBean saleBean);
 	
 	//get an existing sale
-	public SaleBean getSale(int idSales);
+	public SaleBean getSale(int idSale);
 	
 	//get all sales
 	public List<SaleBean> getSales();

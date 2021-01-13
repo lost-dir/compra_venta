@@ -5,6 +5,9 @@ import java.sql.Date;
 
 import javax.validation.constraints.NotNull;
 
+import com.compra.venta.model.Article;
+import com.compra.venta.model.User;
+
 public class SaleBean implements Serializable {
 
 	/**
@@ -15,6 +18,10 @@ public class SaleBean implements Serializable {
 	
 	@NotNull
 	private Date saleDate;
+	
+	private User user;
+	
+	private Article article;
 
 	//CONSTRUCTORS
 	public SaleBean() {
@@ -39,5 +46,21 @@ public class SaleBean implements Serializable {
 
 	public void setSaleDate(Date saleDate) {
 		this.saleDate = saleDate;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Article getArticle() {
+		return article;
+	}
+
+	public void setArticle(Article article) {
+		this.article = article;
 	}
 }
